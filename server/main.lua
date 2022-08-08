@@ -28,12 +28,20 @@ end)
 
 local ItemList = {
     ["casinochips"] = 1,
+    ["casinochipsgreen"] = 10,
+    ["casinochipsblue"] = 100,
+    ["casinochipspurple"] = 500,
+    ["casinochipsblack"] = 1000,
 }
 
 RegisterNetEvent('qb-shops:server:sellChips', function()
     local src = source
     local Player = QBCore.Functions.GetPlayer(src)
     local xItem = Player.Functions.GetItemByName("casinochips")
+    local xItem = Player.Functions.GetItemByName("casinochipsgreen")
+    local xItem = Player.Functions.GetItemByName("casinochipsblue")
+    local xItem = Player.Functions.GetItemByName("casinochipspurple")
+    local xItem = Player.Functions.GetItemByName("casinochipsblack")
     if xItem ~= nil then
         for k in pairs(Player.PlayerData.items) do
             if Player.PlayerData.items[k] ~= nil then

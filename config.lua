@@ -298,7 +298,7 @@ Config.Products = {
             slot = 5,
         },
     },
-    ["gearshop"] = {
+    ["divingshop"] = {
         [1] = {
             name = "diving_gear",
             price = 2500,
@@ -314,6 +314,14 @@ Config.Products = {
             info = {},
             type = "item",
             slot = 2,
+        },
+        [3] = {
+            name = "weapon_crowbar",
+            price = 500,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 3,
         },
     },
     ["leisureshop"] = {
@@ -421,11 +429,236 @@ Config.Products = {
             info = {},
             type = 'item',
             slot = 1,
+        },
+        [2] = {
+            name = 'casinochipsgreen',
+            price = 10,
+            amount = 999999,
+            info = {},
+            type = 'item',
+            slot = 2,
+        },
+        [3] = {
+            name = 'casinochipsblue',
+            price = 100,
+            amount = 999999,
+            info = {},
+            type = 'item',
+            slot = 3,
+        },
+        [4] = {
+            name = 'casinochipspurple',
+            price = 500,
+            amount = 999999,
+            info = {},
+            type = 'item',
+            slot = 4,
+        },
+        [5] = {
+            name = 'casinochipsblack',
+            price = 1000,
+            amount = 999999,
+            info = {},
+            type = 'item',
+            slot = 5,
+        },
+    },
+    ["blackmarket"] = {
+        [1] = {
+            name = 'pistol_ammo',
+            price = 100,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 1,
+            requiresLicense = false,
+        },
+        [2] = {
+            name = 'weapon_snspistol',
+            price = 5000,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 2,
+            requiresLicense = false,
+        },
+        [3] = {
+            name = 'weapon_dagger',
+            price = 1500,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 3,
+        },
+        [4] = {
+            name = 'weapon_hatchet',
+            price = 2000,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 4,
+        },
+        [5] = {
+            name = 'weapon_switchblade',
+            price = 1900,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 5,
+        },
+        [6] = {
+            name = 'weapon_handcuffs',
+            price = 1500,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 6,
+        },
+        [7] = {
+            name = 'weed_og-kush_seed',
+            price = 550,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 7,
+        },
+        [8] = {
+            name = 'weed_white-widow_seed',
+            price = 650,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 8,
+        },
+        [9] = {
+            name = 'weed_ak47_seed',
+            price = 800,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 9,
+        },
+        [10] = {
+            name = "lockpick",
+            price = 200,
+            amount = 50,
+            info = {},
+            type = "item",
+            slot = 10,
+        },
+        [11] = {
+            name = "smg_ammo",
+            price = 200,
+            amount = 100,
+            info = {},
+            type = "item",
+            slot = 11,
+            requiresLicense = false,
+        },
+        [12] = {
+            name = "weapon_smg",
+            price = 8000,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 12,
+            requiresLicense = false,
+        },
+        [13] = {
+            name = "weapon_microsmg",
+            price = 8000,
+            amount = 10,
+            info = {},
+            type = "item",
+            slot = 13,
+            requiresLicense = false,
+        },
+    },
+    ["mechanic"] = {
+        [1] = {
+            name = 'repairkit',
+            price = 2000,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 1,
+        },
+        [2] = {
+            name = 'cleaningkit',
+            price = 1000,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 2,
+        },
+        [3] = {
+            name = 'lockpick',
+            price = 500,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 3,
+        },
+        [4] = {
+            name = 'jerry_can',
+            price = 500,
+            amount = 100,
+            info = {},
+            type = 'item',
+            slot = 4,
+        },
+        [5] = {
+            name = 'screwdriverset',
+            price = 1500,
+            amount = 10,
+            info = {},
+            type = 'item',
+            slot = 5,
+        }
+       
+    },
+        ["weapons_dealer"] = {
+            [1] = {
+                name = "weapon_ak47",
+                price = 25000,
+                amount = 5,
+                info = {},
+                type = "item",
+                slot = 1,
+                requiresLicense = false
         }
     },
 }
 
 Config.Locations = {
+    -- Mechanic Shops
+    ["mechanic"] = {
+        ["label"] = "Mechanic Supplies",
+        ["coords"] = vector4(-320.9, -138.05, 39.08, 72.1),
+        ["ped"] = 's_m_y_armymech_01',
+        ["scenario"] = "WORLD_HUMAN_LEANING",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Mechanic Goods",
+        ["products"] = Config.Products["mechanic"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    ["mechanic2"] = {
+        ["label"] = "Mechanic Supplies",
+        ["coords"] = vector4(-325.61, -108.33, 39.02, 338.65),
+        ["ped"] = 's_m_y_armymech_01',
+        ["scenario"] = "CODE_HUMAN_POLICE_INVESTIGATE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Mechanic Goods",
+        ["products"] = Config.Products["mechanic"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+
     -- 24/7 Locations
     ["247supermarket"] = {
         ["label"] = "24/7 Supermarket",
@@ -552,6 +785,59 @@ Config.Locations = {
         ["blipsprite"] = 52,
         ["blipcolor"] = 0
     },
+    ["247supermarket10"] = {
+        ["label"] = "24/7 Supermarket",
+        ["coords"] = vector4(160.51, 6641.68, 31.61, 222.45),
+        ["ped"] = 'mp_m_shopkeep_01',
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    ["247supermarket11"] = {
+        ["label"] = "24/7 Supermarket",
+        ["coords"] = vector4(270.8, -978.88, 29.37, 154.26),
+        ["ped"] = 's_m_y_dealer_01',
+        ["scenario"] = "WORLD_HUMAN_HANG_OUT_STREET",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    ["247supermarket12"] = {
+        ["label"] = "24/7 Supermarket",
+        ["coords"] = vector4(-2539.33, 2313.81, 33.41, 96.89),
+        ["ped"] = 's_m_y_dealer_01',
+        ["scenario"] = "WORLD_HUMAN_HANG_OUT_STREET",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    -- RON Location
+    ["ron1"] = {
+        ["label"] = "RON Supermarket",
+        ["coords"] = vector4(-1423.12, -271.68, 46.26, 35.86),
+        ["ped"] = 'a_m_m_hillbilly_01',
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
 
     -- LTD Gasoline Locations
     ["ltdgasoline"] = {
@@ -623,6 +909,21 @@ Config.Locations = {
         ["blipsprite"] = 52,
         ["blipcolor"] = 0
     },
+
+    ["ltdgasoline6"] = {
+        ["label"] = "LTD Gasoline",
+        ["coords"] = vector4(291.41, -1272.59, 29.52, 353.04),
+        ["ped"] = 'mp_m_shopkeep_01',
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-shopping-basket",
+        ["targetLabel"] = "Open Shop",
+        ["products"] = Config.Products["normal"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+
 
     -- Rob's Liquor Locations
     ["robsliquor"] = {
@@ -712,7 +1013,7 @@ Config.Locations = {
 
     ["hardware2"] = {
         ["label"] = "Hardware Store",
-        ["coords"] = vector4(2747.71, 3472.85, 55.67, 255.08),
+        ["coords"] = vector4(2735.15, 3463.0, 55.7, 337.83),
         ["ped"] = 'mp_m_waremech_01',
         ["scenario"] = "WORLD_HUMAN_CLIPBOARD",
         ["radius"] = 1.5,
@@ -923,7 +1224,7 @@ Config.Locations = {
         ["blipcolor"] = 0
     },
 
-    -- Weedshop Locations
+  --[[  -- Weedshop Locations
     ["weedshop"] = {
         ["label"] = "Smoke On The Water",
         ["coords"] = vector4(-1171.31, -1570.89, 4.66, 130.03),
@@ -936,21 +1237,21 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 140,
         ["blipcolor"] = 0
-    },
+    },]]--
 
     -- Sea Word Locations
     ["seaword"] = {
-        ["label"] = "Sea Word",
-        ["coords"] = vector4(-1687.03, -1072.18, 13.15, 52.93),
-        ["ped"] = 'a_m_y_beach_01',
-        ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
-        ["radius"] = 1.5,
+        ["label"] = "Diving Shop",
+        ["coords"] = vector4(-3428.44, 966.55, 8.35, 88.84),
+        ["ped"] = 'cs_old_man2',
+        ["scenario"] = "WORLD_HUMAN_STAND_FISHING",
+        ["radius"] = 3.0,
         ["targetIcon"] = "fas fa-fish",
-        ["targetLabel"] = "Sea Word",
-        ["products"] = Config.Products["gearshop"],
+        ["targetLabel"] = "Diving Gear",
+        ["products"] = Config.Products["divingshop"],
         ["showblip"] = true,
-        ["blipsprite"] = 52,
-        ["blipcolor"] = 0
+        ["blipsprite"] = 597,
+        ["blipcolor"] = 3
     },
 
     -- Leisure Shop Locations
@@ -966,5 +1267,61 @@ Config.Locations = {
         ["showblip"] = true,
         ["blipsprite"] = 52,
         ["blipcolor"] = 0
+    },
+    -- Black Market
+    ["blackmarket"] = {
+        ["label"] = "Black Market",
+        ["coords"] = vector4(780.67, -394.89, 33.45, 41.29),
+        ["ped"] = 'Dum_Maelstrom', 
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-leaf",
+        ["targetLabel"] = "Open Black Market",
+        ["products"] = Config.Products["blackmarket"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+       -- s_m_m_movspace_01 
+    },
+    ["blackmarket2"] = {
+        ["label"] = "Black Market",
+        ["coords"] = vector4(-1562.81, -463.57, 36.25, 123.31),
+        ["ped"] = 'darthvader', 
+        ["scenario"] = "WORLD_HUMAN_DRUG_DEALER",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-leaf",
+        ["targetLabel"] = "Open Black Market",
+        ["products"] = Config.Products["blackmarket"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+       -- s_m_m_movspace_01 
+    },
+    ["pawnshop"] = {
+        ["label"] = "Sea Word",
+        ["coords"] = vector4(-265.72, 237.02, 90.57, 84.17),
+        ["ped"] = 'a_m_y_beach_01',
+        ["scenario"] = "WORLD_HUMAN_STAND_IMPATIENT",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-fish",
+        ["targetLabel"] = "Pawnshop",
+        ["products"] = Config.Products["pawnshop"],
+        ["showblip"] = true,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+    },
+    ["weapons_dealer"] = {
+        ["label"] = "Militry Weapons Dealer",
+        ["coords"] = vector4(-2352.6, 3253.04, 92.9, 329.24),
+        ["ped"] = 's_m_y_marine_03', 
+        ["scenario"] = "WORLD_HUMAN_STAND_MOBILE_CLUBHOUSE",
+        ["radius"] = 1.5,
+        ["targetIcon"] = "fas fa-leaf",
+        ["targetLabel"] = "Open Militry Weapons",
+        ["products"] = Config.Products["weapons_dealer"],
+        ["showblip"] = false,
+        ["blipsprite"] = 52,
+        ["blipcolor"] = 0
+       -- s_m_m_movspace_01 
     },
 }
